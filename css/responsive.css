@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Medikit Healthcare Supplier - Responsive Stylesheet (responsive.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Large Devices & Laptops (Max Width: 1024px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 92%;
+    }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+
+    /* Adjust 4-column grids to 2-column on tablets */
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Top bar spacing adjustment */
+    .top-info span {
+        margin-right: 12px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   2. Tablets & Small Screen Laptops (Max Width: 768px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    :root {
+        --section-padding: 40px 0;
+        --card-padding: 18px;
+    }
+
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+
+    /* Convert multi-column grids to single column */
+    .grid-2, 
+    .grid-3, 
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .gap-large {
+        gap: 24px;
+    }
+
+    /* Header & Navigation Mobile Layout */
+    .top-bar {
+        text-align: center;
+    }
+
+    .top-bar .flex-between {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .top-info span {
+        display: inline-block;
+        margin: 2px 8px;
+    }
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .header-cta {
+        display: none; /* Hide primary header button on smaller screens to save space */
+    }
+
+    .menu-toggle {
+        display: block;
+        color: var(--primary-color);
+    }
+
+    /* Mobile Dropdown Navigation Links */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: var(--shadow-lg);
+        gap: 15px;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a.active::after {
+        display: none;
+    }
+
+    /* Forms Layout Adjustments */
+    .form-row {
+        grid-template-columns: 1fr !important;
+    }
+
+    .card-shadow {
+        padding: 20px;
+    }
+
+    /* Product Filter Responsive Styling */
+    .category-filter {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        white-space: nowrap;
+    }
+
+    .filter-btn {
+        font-size: 0.85rem;
+        padding: 6px 14px;
+    }
+
+    /* Footer Responsive Grid */
+    .footer {
+        padding-top: 40px;
+    }
+
+    .footer .grid-4 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. Small Mobile Devices (Max Width: 480px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.3rem; }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .top-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .top-info span {
+        margin: 0;
+    }
+
+    .product-img {
+        height: 180px;
+    }
+}

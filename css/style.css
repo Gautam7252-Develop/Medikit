@@ -1,0 +1,562 @@
+/* ==========================================================================
+   Medikit Healthcare Supplier - Primary Stylesheet (style.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Variables & Design Tokens
+   -------------------------------------------------------------------------- */
+:root {
+    /* Brand Colors */
+    --primary-color: #0056b3;       /* Professional Medical Blue */
+    --primary-hover: #004085;
+    --secondary-color: #00a8cc;     /* Cyan / Teal Accent */
+    --secondary-hover: #0088a3;
+    --accent-whatsapp: #25d366;     /* WhatsApp Green */
+    --accent-whatsapp-hover: #1da851;
+    
+    /* Neutral Colors */
+    --dark-color: #212529;          /* Main Text Dark */
+    --body-bg: #ffffff;             /* Main Background */
+    --light-bg: #f8f9fa;            /* Section Background Light */
+    --card-bg: #ffffff;             /* Card Background */
+    --border-color: #e9ecef;        /* Soft Border */
+    --muted-text: #6c757d;          /* Subdued Text */
+
+    /* Typography */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 1rem;         /* 16px */
+    --line-height-base: 1.6;
+
+    /* Spacing & Layout */
+    --container-max-width: 1200px;
+    --section-padding: 60px 0;
+    --card-padding: 24px;
+    --border-radius: 8px;
+
+    /* Transitions & Shadows */
+    --transition-fast: all 0.3s ease;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   2. Base & CSS Reset
+   -------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--dark-color);
+    background-color: var(--body-bg);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   3. Helper & Utility Classes
+   -------------------------------------------------------------------------- */
+.container {
+    width: 90%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: var(--section-padding);
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gap-large {
+    gap: 40px;
+}
+
+.margin-top {
+    margin-top: 30px;
+}
+
+.rounded-shadow {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+
+p {
+    margin-bottom: 15px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title p {
+    color: var(--muted-text);
+    font-size: 1.1rem;
+}
+
+.icon-large {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.icon-huge {
+    font-size: 3rem;
+    color: var(--accent-whatsapp);
+    margin-bottom: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Layout Grids
+   -------------------------------------------------------------------------- */
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* --------------------------------------------------------------------------
+   5. Buttons & Interactive Elements
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition-fast);
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+    color: #ffffff;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-whatsapp {
+    background-color: var(--accent-whatsapp);
+    color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--accent-whatsapp-hover);
+    color: #ffffff;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* --------------------------------------------------------------------------
+   6. Top Contact Bar & Navigation Header
+   -------------------------------------------------------------------------- */
+.top-bar {
+    background-color: var(--dark-color);
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 8px 0;
+}
+
+.top-info span {
+    margin-right: 20px;
+}
+
+.top-info i {
+    color: var(--secondary-color);
+    margin-right: 5px;
+}
+
+.top-social .whatsapp-btn {
+    color: var(--accent-whatsapp);
+    font-weight: 600;
+}
+
+.top-social .whatsapp-btn:hover {
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   7. Page Header Banners
+   -------------------------------------------------------------------------- */
+.page-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-header p {
+    color: var(--muted-text);
+    max-width: 800px;
+    margin: 10px auto 0;
+    font-size: 1.1rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. Cards Framework (General, Products, Info Cards)
+   -------------------------------------------------------------------------- */
+.card, .product-card, .cardFeature {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+    transition: var(--transition-fast);
+}
+
+.card:hover, .product-card:hover, .cardFeature:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.card-shadow {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+}
+
+.highlight-card {
+    background-color: #eefbf3;
+    border: 1px solid #c3e6cb;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   9. Product Catalogue Section
+   -------------------------------------------------------------------------- */
+.category-filter {
+    gap: 10px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--dark-color);
+    transition: var(--transition-fast);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+.product-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.category-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.product-meta {
+    margin: 15px 0;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border-color);
+    font-size: 0.9rem;
+    color: var(--muted-text);
+}
+
+.card-buttons {
+    margin-top: auto;
+    gap: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   10. Forms & Inputs (Bulk Order & Contact Forms)
+   -------------------------------------------------------------------------- */
+.form-subtitle {
+    color: var(--muted-text);
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    transition: var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
+}
+
+.benefit-list, .step-list {
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+.benefit-list li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.benefit-list i {
+    color: var(--accent-whatsapp);
+    margin-right: 8px;
+}
+
+.step-list {
+    padding-left: 20px;
+}
+
+.step-list li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   11. Footer Section
+   -------------------------------------------------------------------------- */
+.footer {
+    background-color: var(--dark-color);
+    color: #ced4da;
+    padding-top: 50px;
+    font-size: 0.9rem;
+}
+
+.footer h4 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ced4da;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.footer-col p {
+    margin-bottom: 12px;
+}
+
+.footer-col i {
+    color: var(--secondary-color);
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #343a40;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
