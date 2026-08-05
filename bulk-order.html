@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Order Inquiry | Medikit Healthcare Procurement</title>
+    <meta name="description" content="Request a bulk healthcare quotation from Medikit. We supply hospitals, clinics, pharmacies, NGOs, and corporate offices with high-quality medical products at competitive bulk prices.">
+    <meta name="keywords" content="Bulk Medical Order, Healthcare Inquiry, Medical Supply Quote, Bulk Hospital Supplies, Medikit Quotation, Wholesale Medical Products">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container flex-between">
+            <div class="top-info">
+                <span><i class="fa-solid fa-clock"></i> Mon – Sat | 9:00 AM – 6:00 PM</span>
+                <span><i class="fa-solid fa-envelope"></i> info@medikit.in</span>
+                <span><i class="fa-solid fa-phone"></i> +91 XXXXX XXXXX</span>
+            </div>
+            <div class="top-social">
+                <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp Support</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="container flex-between">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Medikit Logo">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="bulk-order.html" class="active">Bulk Inquiry</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            <div class="header-cta">
+                <a href="bulk-order.html" class="btn btn-primary">Request Bulk Quote</a>
+            </div>
+            <div class="menu-toggle" id="mobileMenu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header bg-light section-padding">
+        <div class="container text-center">
+            <h1>Bulk Order & Institutional Inquiry</h1>
+            <p>Medikit specializes exclusively in bulk healthcare procurement for organizations and institutions. Fill out the form below or message us directly on WhatsApp to get a customized price quotation for your requirement.</p>
+        </div>
+    </section>
+
+    <section class="bulk-inquiry-section section-padding">
+        <div class="container">
+            <div class="grid grid-2 gap-large">
+                
+                <div class="inquiry-form-container card-shadow">
+                    <h2>Request a Customized Quotation</h2>
+                    <p class="form-subtitle">Please provide your institutional procurement details. Our team will review your requirement and reach out within 24 hours.</p>
+                    
+                    <form action="#" method="POST" class="bulk-form" id="bulkInquiryForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="e.g. Dr. Rajesh Kumar" required>
+                        </div>
+
+                        <div class="grid grid-2 form-row">
+                            <div class="form-group">
+                                <label for="orgName">Organization / Institution Name *</label>
+                                <input type="text" id="orgName" name="orgName" placeholder="e.g. City Hospital / Apex NGO" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="industryType">Organization Type *</label>
+                                <select id="industryType" name="industryType" required>
+                                    <option value="" disabled selected>Select Organization Type</option>
+                                    <option value="Hospital">Hospital / Nursing Home</option>
+                                    <option value="Clinic">Clinic / Diagnostic Center</option>
+                                    <option value="Pharmacy">Pharmacy / Retailer</option>
+                                    <option value="NGO">NGO / Non-Profit</option>
+                                    <option value="Education">School / College / University</option>
+                                    <option value="Corporate">Corporate Office</option>
+                                    <option value="Government">Government Department</option>
+                                    <option value="Distributor">Healthcare Distributor</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-2 form-row">
+                            <div class="form-group">
+                                <label for="email">Business Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="name@organization.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone / Mobile Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-2 form-row">
+                            <div class="form-group">
+                                <label for="productCategory">Product Category *</label>
+                                <select id="productCategory" name="productCategory" required>
+                                    <option value="" disabled selected>Select Category</option>
+                                    <option value="Womens Health">Women's Healthcare & Hygiene</option>
+                                    <option value="First Aid">First Aid & Emergency Kits</option>
+                                    <option value="Diagnostic Devices">Diagnostic & Medical Devices</option>
+                                    <option value="PPE Gear">PPE & Safety Gear</option>
+                                    <option value="Consumables">Healthcare Consumables</option>
+                                    <option value="Personal Care">Personal Care</option>
+                                    <option value="Multiple">Multiple Categories / Full Catalog</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="estimatedQty">Estimated Order Quantity / Units *</label>
+                                <input type="text" id="estimatedQty" name="estimatedQty" placeholder="e.g. 500 kits, 1000 units" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deliveryLocation">Delivery Location / City & State *</label>
+                            <input type="text" id="deliveryLocation" name="deliveryLocation" placeholder="e.g. Patna, Bihar" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="requirementDetails">Specific Product Specifications / Additional Notes</label>
+                            <textarea id="requirementDetails" name="requirementDetails" rows="4" placeholder="Mention specific brand preferences, packaging requirements, timeline, or special instructions..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
+                    </form>
+                </div>
+
+                <div class="inquiry-info-panel">
+                    
+                    <div class="card whatsapp-card highlight-card">
+                        <i class="fa-brands fa-whatsapp icon-huge"></i>
+                        <h3>Need an Immediate Quotation?</h3>
+                        <p>Skip the form and connect directly with our procurement sales team on WhatsApp for fast response and instant pricing assistance.</p>
+                        <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Medikit%2C%20I%20would%20like%20to%20request%20a%20bulk%20quote%20for%20healthcare%20products." target="_blank" class="btn btn-whatsapp btn-block">
+                            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp Now
+                        </a>
+                    </div>
+
+                    <div class="card info-card">
+                        <h3><i class="fa-solid fa-boxes-stacked"></i> Why Partner with Medikit?</h3>
+                        <ul class="benefit-list">
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Bulk Pricing:</strong> Directly negotiated prices to maximize cost efficiency[cite: 132, 144].</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>100% Genuine Supplies:</strong> Authenticity guaranteed directly from trusted manufacturers[cite: 128, 143].</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Reliable Logistics:</strong> Pan-India shipping to urban and rural regional centers[cite: 129, 140].</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Dedicated Account Manager:</strong> Customized procurement assistance tailored to your business needs[cite: 35, 145].</li>
+                        </ul>
+                    </div>
+
+                    <div class="card info-card">
+                        <h3><i class="fa-solid fa-list-check"></i> Quick Process</h3>
+                        <ol class="step-list">
+                            <li>Submit your requirement via Form or WhatsApp.</li>
+                            <li>Receive a customized quotation within 24 hours.</li>
+                            <li>Confirm order details & invoice.</li>
+                            <li>Dispatch & door-step delivery to your location.</li>
+                        </ol>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="footer-col">
+                    <h4>About Medikit</h4>
+                    <p>Medikit is a trusted healthcare procurement company supplying quality medical products in bulk to hospitals, clinics, pharmacies, NGOs, educational institutions, and corporate organizations across India[cite: 125, 131, 148].</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="bulk-order.html">Bulk Inquiry</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal Policies</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Refund & Cancellation</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Office Address Placeholder, India</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 XXXXX XXXXX</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@medikit.in</p>
+                    <p><i class="fa-solid fa-clock"></i> Mon – Sat | 9:00 AM – 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Medikit. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/whatsapp.js"></script>
+</body>
+</html>
